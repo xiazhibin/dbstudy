@@ -1,0 +1,32 @@
+*.pyc
+*.pyo
+nohup.out
+/.cache
+/log
+/instance
+/.idea
+test.py
+*.fbx
+*.json
+*.obj
+/files
+*.conf
+
+.DS_Store
+
+.python-version
+/run
+gun_config.py
+
+fbx2pc
+mesh_reduce
+
+# For capistrano
+/config/shared
+
+# for cloud file manager
+download
+cache
+
+# for npm
+npm-debug.log

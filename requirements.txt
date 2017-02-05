@@ -1,0 +1,6 @@
+flask==0.11.1
+flask-sqlalchemy==2.1
+psycopg2==2.6.2
+flask-redis==0.3.0
+requests==2.10.0
+flask-migrate==2.0.0
