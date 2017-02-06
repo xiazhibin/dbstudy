@@ -6,3 +6,4 @@ from .products import Products
 from .screenshots import Screenshots
 from .tags import Tags
 from .bugstatus import BugStatus
+from .contacts import Contacts
