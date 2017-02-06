@@ -2,8 +2,8 @@ from study_flask_aql import db
 from datetime import datetime
 
 
-class Bugs(db.model):
-    bug_id = db.Column(db.Integer, primary_key=True)
+class Bugs(db.Model):
+    bug_id = db.Column(db.BigInteger, primary_key=True)
     created_at = db.Column(db.DateTime, default=datetime.now)
     summary = db.Column(db.String(80))
     description = db.Column(db.String(1000))

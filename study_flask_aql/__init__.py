@@ -10,3 +10,5 @@ app.config.from_pyfile('config.py')
 
 db = SQLAlchemy(app)
 redis_store = FlaskRedis(app)
+
+import study_flask_aql.models
