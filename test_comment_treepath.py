@@ -65,13 +65,11 @@ insert into TreePaths(ancestor, descendant)
 union all
   select c.comment_id,c.comment_id
 '''
-q = db.session.query(TreePaths.ancestor, bindparam('path', c.comment_id)).filter(TreePaths.descendant == 2)
+q = select([TreePaths.ancestor, bindparam('path', c.comment_id)]).where(TreePaths.descendant==2)
 x = q.union_all(select((c.comment_id, c.comment_id)))
 ins = insert(TreePaths).from_select([TreePaths.ancestor, TreePaths.descendant], x)
 
-rv = db.session.execute(ins)
-print rv.rowcount
-
+db.session.execute(ins)
 # q = TreePaths.query.filter(TreePaths.descendant == 5)
 # x = q.union_all(
 #     select((c.comment_id, c.comment_id)))
