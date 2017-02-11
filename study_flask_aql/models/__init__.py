@@ -7,3 +7,4 @@ from .screenshots import Screenshots
 from .tags import Tags
 from .bugstatus import BugStatus
 from .contacts import Contacts
+from .treepaths import TreePaths
