@@ -8,3 +8,4 @@ class Accounts(db.Model):
     last_name = db.Column(db.String(20))
     password_hash = db.Column(db.String(64))
     email = db.Column(db.String(100))
+    hourly_rate = db.Column(db.NUMERIC(9, 2))
