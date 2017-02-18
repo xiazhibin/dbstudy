@@ -11,6 +11,6 @@ class Bugs(db.Model):
     reported_by = db.Column(db.BigInteger)
     assigned_to = db.Column(db.BigInteger)
     verified_by = db.Column(db.BigInteger)
-    status = db.Column(db.String(20), default='NEW')
+    status = db.Column(db.String(20), db.ForeignKey('bug_status.status', onupdate='CASCADE'), default='NEW')
     priority = db.Column(db.String(20))
     hours = db.Column(db.Numeric(9, 2))
